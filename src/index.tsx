@@ -16,7 +16,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <React.Suspense fallback={<div>booting up...</div>}>
+    <React.Suspense
+      fallback={<div className="text-center my-5 py-5">booting up...</div>}
+    >
       <Router>
         <App />
       </Router>
