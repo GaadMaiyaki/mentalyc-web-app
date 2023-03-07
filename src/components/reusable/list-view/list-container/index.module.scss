@@ -1,0 +1,50 @@
+@import "../../../../styles/_sizes.scss";
+
+.wrapper {
+  background-color: var(--mentalyc-white);
+  box-shadow: 4px 4px 8px var(--mentalyc-shadow-dark);
+  border-radius: $mentalyc-md;
+
+  button {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .flexProgress {
+    flex: 8;
+  }
+
+  .flexDelete {
+    flex: 4;
+  }
+}
+
+.modalWrapper {
+  .btn-style {
+    outline: 0;
+    border: 0;
+    transition: 0.3s;
+    color: var(--mentalyc-white);
+    border-radius: $mentalyc-sm;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  > button:nth-child(1) {
+    @extend .btn-style;
+    background-color: var(--mentalyc-primary);
+  }
+
+  > button:nth-child(2) {
+    @extend .btn-style;
+    background-color: var(--mentalyc-bg-dark);
+  }
+}
