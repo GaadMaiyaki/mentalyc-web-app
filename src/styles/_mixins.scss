@@ -1,0 +1,23 @@
+@mixin font($size, $weight: 400) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+
+@mixin scrollbars($size: 3px, $background-color: var(--deep-black)) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $background-color;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #e2e2e2;
+    border-radius: 5px;
+  }
+  scrollbar-color: #e2e2e2 $background-color;
+}
