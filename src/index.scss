@@ -1,0 +1,21 @@
+@import "./styles/colors";
+@import "./styles/mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+input,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset !important;
+}
+
+*::selection:not(input) {
+  box-shadow: 0 0 0 1000px var(--white) inset !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset !important;
+}
