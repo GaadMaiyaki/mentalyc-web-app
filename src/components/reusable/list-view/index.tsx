@@ -15,6 +15,8 @@ interface IListView {
 }
 
 const ListView = ({ data, setNotes }: IListView) => {
+  if (data.length <= 0) return null;
+
   return (
     <>
       <div
@@ -67,18 +69,12 @@ const ListView = ({ data, setNotes }: IListView) => {
           </Typography>
         </div>
 
-        <div className={styles.listBody}>
-          {data.length <= 0 ? (
-            <Typography variant="div" size="sm">
-              No available notes.
-            </Typography>
-          ) : (
-            data.map((note) => {
-              return (
-                <ListContainer key={note.id} note={note} setNotes={setNotes} />
-              );
-            })
-          )}
+        <div className={parseClassName([styles.listBody, "py-2"])}>
+          {data.map((note) => {
+            return (
+              <ListContainer key={note.id} note={note} setNotes={setNotes} />
+            );
+          })}
         </div>
       </div>
     </>
