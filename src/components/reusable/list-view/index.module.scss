@@ -1,0 +1,21 @@
+@import "../../../styles/_sizes.scss";
+@import "../../../styles/_mixins.scss";
+
+.header {
+  border: 1px solid var(--mentalyc-border-light);
+  border-radius: $mentalyc-md;
+
+  > div {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: var(--mentalyc-primary-light);
+    color: var(--mentalyc-white);
+  }
+}
+
+.listBody {
+  overflow-y: auto;
+  max-height: 45vh;
+  @include scrollbars(5px, var(--mentalyc-primary-grey));
+}
