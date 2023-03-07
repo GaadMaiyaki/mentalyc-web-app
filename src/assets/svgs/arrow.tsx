@@ -1,0 +1,20 @@
+const ArrowSvg = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 14L12.3536 8.35355C12.1583 8.15829 11.8417 8.15829 11.6464 8.35355L6 14"
+        stroke="black"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+
+export default ArrowSvg;
