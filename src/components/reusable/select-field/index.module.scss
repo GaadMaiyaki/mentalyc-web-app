@@ -1,0 +1,68 @@
+@import "../../../styles/_mixins.scss";
+@import "../../../styles/_sizes.scss";
+
+.wrapper {
+  .innerWrapper {
+    background-color: var(--mentalyc-primary-grey);
+    border-radius: $mentalyc-md;
+
+    > input {
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+      color: var(--mentalyc-black);
+      @include font(0.9em, 400);
+
+      &::placeholder {
+        color: var(--mentalyc-bg-dark);
+      }
+    }
+  }
+
+  .arrow {
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.up {
+      transform: rotate(180deg);
+    }
+
+    .down {
+      transform: rotate(180deg);
+    }
+  }
+
+  .listBox {
+    overflow-y: auto;
+    max-height: 15em;
+    background-color: var(--mentalyc-white);
+    border-radius: 0 0 $mentalyc-lg $mentalyc-lg;
+    box-shadow: 1px 4px 6px var(--mentalyc-shadow-dark);
+    @include scrollbars(3px, var(--mentalyc-bg-fade));
+
+    .dropDownOption {
+      font-size: 0.9em;
+      cursor: pointer;
+      border-top-left-radius: $mentalyc-sm;
+      border-top-right-radius: $mentalyc-sm;
+      border-bottom-left-radius: $mentalyc-sm;
+      border-bottom-right-radius: $mentalyc-sm;
+      transition: all 0.3;
+
+      &:hover {
+        border-left: 3px solid var(--mentalyc-secondary);
+        border-right: 3px solid var(--mentalyc-secondary);
+        opacity: 0.9;
+      }
+
+      &.selected {
+        background-color: var(--mentalyc-secondary-light);
+      }
+    }
+  }
+}
