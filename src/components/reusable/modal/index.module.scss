@@ -1,0 +1,29 @@
+@import "../../../styles/_mixins.scss";
+
+@import "../../../styles/_sizes.scss";
+
+.wrapper {
+  z-index: 1;
+  top: 0;
+  height: 100vh;
+  scrollbar-gutter: stable;
+  padding-top: 10em;
+  background-color: var(--mentalyc-bg-fade);
+
+  .container {
+    background-color: var(--mentalyc-white);
+    border-radius: $mentalyc-xl;
+
+    button {
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
