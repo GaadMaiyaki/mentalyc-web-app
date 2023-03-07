@@ -1,0 +1,20 @@
+@import "../../../styles/_sizes.scss";
+
+.wrapper {
+  background-color: var(--mentalyc-bg-dark);
+  height: $mentalyc-xxl;
+  border-radius: $mentalyc-md;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    height: $mentalyc-lg;
+  }
+
+  > div {
+    background: var(--mentalyc-success);
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: width 0.5s;
+  }
+}
