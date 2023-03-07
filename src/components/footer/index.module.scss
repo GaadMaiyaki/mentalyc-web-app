@@ -1,0 +1,9 @@
+@import "../../styles/_sizes.scss";
+
+.line {
+  width: 40%;
+  height: $mentalyc-sm;
+  background-color: var(--mentalyc-black);
+  border-radius: 100px;
+  bottom: 20px;
+}
