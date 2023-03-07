@@ -1,4 +1,4 @@
-# File Upload Interface with Progress Bar
+# Mentalyc web app
 
 This project is a responsive file upload interface with a progress bar for tracking the processing state of the current file. It consists of three components - the main container, the upload component (button + modal), and the progress component.
 
