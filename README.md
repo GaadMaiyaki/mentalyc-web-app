@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# File Upload Interface with Progress Bar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a responsive file upload interface with a progress bar for tracking the processing state of the current file. It consists of three components - the main container, the upload component (button + modal), and the progress component.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with the project, follow the steps below:
 
-### `yarn start`
+1. Clone the repository to your local machine
+2. Install the necessary dependencies by running `npm install` or `yarn install`
+3. Start the development server by running `npm start` or `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This will start the application on your local machine.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Test
 
-### `yarn test`
+`yarn test` to launch the test runner in the interactive watch mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+To use the application, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Click on the main "Upload" button to open the modal window
+2. Select a note type from the drop-down menu and add a name to enable the "upload" button
+3. Click on the "finish upload" button to initiate the file upload process (we will skip the actual file upload process for simplicity)
+4. After the file has been uploaded, the modal window will close, and the user will be presented with a table of all processing files, along with a progress bar representing the processing state of each task
+5. Each processing task can be canceled by clicking on the delete button
+6. Each progress bar will update with a fake timer, and when a bar reaches 100%, it will disappear from the list
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Libraries and Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project uses the following libraries and technologies:
 
-### `yarn eject`
+- React: A JavaScript library for building user interfaces
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript
+- Sass: A CSS preprocessor that adds features such as variables, mixins, and nesting to CSS
+- Bootstrap: A CSS framework for building responsive and mobile-first websites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Deployment
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project can be deployed using any hosting provider that supports static site hosting. To deploy the project, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Build the project by running `npm run build` or `yarn build`
+2. Upload the contents of the `build` folder to your hosting provider
