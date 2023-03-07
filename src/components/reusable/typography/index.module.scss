@@ -1,0 +1,59 @@
+.secondary-light {
+  color: var(--mentalyc-text-light);
+}
+
+.black {
+  color: var(--mentalyc-dark);
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.italic {
+  text-emphasis: "";
+}
+
+.xs {
+  font-size: 0.9em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.85em;
+  }
+}
+
+.sm {
+  font-size: 1em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9em;
+  }
+}
+
+.md {
+  font-size: 1.25em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1em;
+  }
+}
+
+.lg {
+  font-size: 1.5em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.25em;
+  }
+}
