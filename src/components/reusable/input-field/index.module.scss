@@ -1,0 +1,25 @@
+@import "../../../styles/_mixins.scss";
+@import "../../../styles/_sizes.scss";
+
+.field {
+  background-color: var(--mentalyc-primary-grey);
+  border: 0;
+  border-radius: $mentalyc-md;
+  color: var(--mentalyc-black);
+  padding: 4px;
+
+  @include font(0.9em, 400);
+
+  &::placeholder {
+    color: var(--mentalyc-bg-dark);
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid var(--risk-primary-light);
+  }
+
+  &.error {
+    border: 1px solid var(--risk-danger) !important;
+  }
+}
