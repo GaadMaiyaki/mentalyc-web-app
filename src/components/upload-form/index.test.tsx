@@ -1,12 +1,15 @@
 import React from "react";
-import { render, fireEvent, waitFor } from "@testing-library/react";
+
+import { render, fireEvent } from "@testing-library/react";
 
 import UploadForm from ".";
 
 describe("UploadForm", () => {
   it("should render correctly", () => {
+    const handleSubmit = jest.fn();
+
     const { getByText, getByLabelText } = render(
-      <UploadForm isSleeping={false} handleSubmit={() => {}} />
+      <UploadForm isSleeping={false} handleSubmit={handleSubmit} />
     );
 
     expect(getByText("Complete Your Upload")).toBeInTheDocument();
@@ -19,8 +22,10 @@ describe("UploadForm", () => {
   });
 
   it("should disable button when client name and note type are not selected", () => {
+    const handleSubmit = jest.fn();
+
     const { getByRole, getByLabelText } = render(
-      <UploadForm isSleeping={false} handleSubmit={() => {}} />
+      <UploadForm isSleeping={false} handleSubmit={handleSubmit} />
     );
 
     expect(getByRole("button")).toBeDisabled();
