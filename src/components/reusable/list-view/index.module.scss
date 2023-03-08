@@ -15,6 +15,7 @@
 }
 
 .listBody {
+  padding: 1em 0.5em;
   overflow-y: auto;
   max-height: 45vh;
   @include scrollbars(5px, var(--mentalyc-primary-grey));
