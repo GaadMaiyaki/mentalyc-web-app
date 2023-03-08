@@ -26,7 +26,7 @@ const UploadForm = ({
 
   return (
     <form className="mt-2 text-center h-100" onSubmit={handleSubmit(values)}>
-      <Typography variant="h6" size="sm" bold>
+      <Typography variant="h6" size="md" bold>
         Complete Your Upload
       </Typography>
 
