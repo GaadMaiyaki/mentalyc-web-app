@@ -102,6 +102,7 @@ const SelectField = ({
             autoCorrect="false"
             autoComplete="off"
             spellCheck="false"
+            readOnly
           />
           <span
             role="img"
