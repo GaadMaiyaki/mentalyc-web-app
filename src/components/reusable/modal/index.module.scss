@@ -12,6 +12,10 @@
   background-color: var(--mentalyc-bg-fade);
   @include scrollbars(5px, var(--mentalyc-bg-fade));
 
+  > div:nth-child(1) {
+    min-height: 100vh;
+  }
+
   @media screen and (max-width: 768px) {
     padding-top: 7em;
   }
