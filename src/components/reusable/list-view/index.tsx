@@ -69,7 +69,7 @@ const ListView = ({ data, setNotes }: IListView) => {
           </Typography>
         </div>
 
-        <div className={parseClassName([styles.listBody, "py-2"])}>
+        <div className={parseClassName([styles.listBody])}>
           {data.map((note) => {
             return (
               <ListContainer key={note.id} note={note} setNotes={setNotes} />
