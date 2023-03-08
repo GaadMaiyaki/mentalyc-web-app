@@ -26,8 +26,7 @@ const DashboardComponent = () => {
   useProgress({ notes, setNotes, isSleeping });
 
   const handleSubmit =
-    (values: IInputValues) =>
-    async (e: React.ChangeEvent<HTMLButtonElement>) => {
+    (values: IInputValues) => async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       if (!values.client_name || !values.note_type) return;
