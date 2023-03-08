@@ -100,7 +100,8 @@ const SelectField = ({
             className="w-100 py-2"
             placeholder={placeholder}
             autoCorrect="false"
-            autoComplete="false"
+            autoComplete="off"
+            spellCheck="false"
           />
           <span
             role="img"
