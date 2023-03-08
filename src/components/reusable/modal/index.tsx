@@ -34,7 +34,7 @@ const Modal = ({
     ? ReactDOM.createPortal(
         <section
           className={parseClassName([
-            "position-fixed w-100 d-flex",
+            "position-absolute w-100",
             styles.wrapper,
           ])}
           onClick={closeModal}
@@ -68,7 +68,9 @@ const Modal = ({
 
                 <aside
                   id="modalDescription"
-                  className="px-2 px-lg-4 px-xl-5 px-xxl-5 h-100"
+                  className={parseClassName([
+                    "px-2 px-lg-4 px-xl-5 px-xxl-5 h-100",
+                  ])}
                   tabIndex={0}
                 >
                   {children}
