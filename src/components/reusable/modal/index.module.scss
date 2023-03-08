@@ -5,10 +5,12 @@
 .wrapper {
   z-index: 1;
   top: 0;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
   scrollbar-gutter: stable;
   padding-top: 10em;
   background-color: var(--mentalyc-bg-fade);
+  @include scrollbars(5px, var(--mentalyc-bg-fade));
 
   @media screen and (max-width: 768px) {
     padding-top: 7em;

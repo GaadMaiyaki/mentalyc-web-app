@@ -25,7 +25,7 @@ const UploadForm = ({
   const shouldDisable = !values.client_name || !values.note_type;
 
   return (
-    <form className="mt-2 text-center" onSubmit={handleSubmit(values)}>
+    <form className="mt-2 text-center h-100" onSubmit={handleSubmit(values)}>
       <Typography variant="h6" size="sm" bold>
         Complete Your Upload
       </Typography>
