@@ -33,7 +33,7 @@ const InputField = React.forwardRef(
         aria-label={label}
         autoComplete="false"
         autoCorrect="false"
-        ref={ref}
+        autoFocus={false}
         {...props}
       />
     );

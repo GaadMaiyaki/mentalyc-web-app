@@ -10,6 +10,10 @@
   padding-top: 10em;
   background-color: var(--mentalyc-bg-fade);
 
+  @media screen and (max-width: 768px) {
+    padding-top: 7em;
+  }
+
   .container {
     background-color: var(--mentalyc-white);
     border-radius: $mentalyc-xl;

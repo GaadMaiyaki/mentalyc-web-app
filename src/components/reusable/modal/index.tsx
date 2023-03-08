@@ -68,7 +68,7 @@ const Modal = ({
 
                 <aside
                   id="modalDescription"
-                  className="px-2 px-lg-4 px-xl-5 px-xxl-5 h-100"
+                  className="px-2 px-lg-4 px-xl-5 px-xxl-5"
                   tabIndex={0}
                 >
                   {children}
