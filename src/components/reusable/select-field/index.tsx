@@ -67,12 +67,6 @@ const SelectField = ({
     }
   };
 
-  React.useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-
   return (
     <>
       <div
