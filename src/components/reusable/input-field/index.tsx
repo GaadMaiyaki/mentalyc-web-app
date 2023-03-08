@@ -31,9 +31,10 @@ const InputField = React.forwardRef(
         type={type}
         placeholder={placeholder}
         aria-label={label}
-        autoComplete="false"
         autoCorrect="false"
         autoFocus={false}
+        autoComplete="off"
+        spellCheck="false"
         {...props}
       />
     );
