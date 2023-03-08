@@ -1,5 +1,7 @@
 import useForm from "../../hooks/useForm";
 
+import { IInputValues } from "../../models";
+
 import Button from "../reusable/button";
 import InputField from "../reusable/input-field";
 import SelectField from "../reusable/select-field";
@@ -7,7 +9,15 @@ import Typography from "../reusable/typography";
 
 const initialValues = { client_name: "", note_type: "" };
 
-const UploadForm = ({ isSleeping, handleSubmit }: any) => {
+const UploadForm = ({
+  isSleeping,
+  handleSubmit,
+}: {
+  isSleeping: boolean;
+  handleSubmit: (
+    values: IInputValues
+  ) => (e: React.FormEvent<HTMLFormElement>) => Promise<void>;
+}) => {
   const { values, handleChange, setFieldValue } = useForm({
     initialValues,
   });
@@ -65,7 +75,6 @@ const UploadForm = ({ isSleeping, handleSubmit }: any) => {
           color="gradient"
           size="md"
           type="submit"
-          onClick={handleSubmit}
         />
       </aside>
     </form>
