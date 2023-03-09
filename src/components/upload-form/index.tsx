@@ -52,7 +52,7 @@ const UploadForm = ({
           "Family therapy note - 80 left",
         ]}
         onChange={setFieldValue}
-        classes="mb-5 mt-4"
+        classes="mb-4 mb-lg-5 mb-xl-5 mb-xxl-5 mt-4"
         placeholder="Select note type"
       />
 
@@ -63,7 +63,7 @@ const UploadForm = ({
         placeholder="Enter client name"
         value={values["client_name"] || ""}
         onChange={handleChange}
-        classes="my-0 my-lg-3 my-xl-3 my-xxl-3"
+        classes="my-1 my-lg-3 my-xl-3 my-xxl-3"
       />
 
       <aside className="d-flex justify-content-center mt-5 mb-3">
