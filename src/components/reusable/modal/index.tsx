@@ -45,7 +45,7 @@ const Modal = ({
           ref={modalRef}
         >
           <div className="container" tabIndex={-1}>
-            <div className="row justify-content-center px-3">
+            <div className="row justify-content-center px-2">
               <aside
                 onClick={handleModalClick}
                 className={parseClassName([
