@@ -9,7 +9,7 @@ const Header = () => {
     <section className={parseClassName(["py-3", styles.wrapper])}>
       <div className="container">
         <aside className="d-flex justify-content-center justify-content-lg-start justify-content-xl-start justify-content-xxl-start align-items-center">
-          <span aria-label="Mentalyc logo" title="Mentalyc logo">
+          <span role="img" aria-label="Mentalyc logo">
             <LogoSvg />
           </span>
         </aside>
