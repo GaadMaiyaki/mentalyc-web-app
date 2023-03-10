@@ -6,6 +6,7 @@ import { INotes } from "../../../../models";
 import Modal from "../../modal";
 import ProgressBar from "../../progress-bar";
 import Typography from "../../typography";
+import ListModal from "../list-modal";
 
 import { parseClassName } from "./../../../../utils";
 
@@ -28,9 +29,18 @@ const ListContainer = ({
   };
 
   const [show, setShow] = React.useState(false);
+  const [showListModal, setShowListModal] = React.useState(false);
 
   return (
     <>
+      <Modal
+        show={showListModal}
+        setShow={setShowListModal}
+        columnLayout="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-6"
+        padding={false}
+      >
+        <ListModal note={note} setNotes={setNotes} setShow={setShowListModal} />
+      </Modal>
       <Modal
         show={show}
         setShow={setShow}
@@ -65,6 +75,7 @@ const ListContainer = ({
       </Modal>
 
       <div
+        onClick={() => setShowListModal(true)}
         className={parseClassName([
           "d-flex align-items-center justify-content-between",
           "ps-2 ps-md-3 ps-lg-4 ps-xl-4 ps-xxl-4",

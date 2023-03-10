@@ -8,9 +8,16 @@
   height: 100vh;
   overflow-y: auto;
   scrollbar-gutter: stable;
-  padding-top: 10em;
   background-color: var(--mentalyc-bg-fade);
   @include scrollbars(5px, var(--mentalyc-bg-fade));
+
+  &.padding {
+    padding-top: 10em;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 7em;
+    }
+  }
 
   //> div:nth-child(1) {
   //  @media screen and (max-width: 768px) {
@@ -20,7 +27,6 @@
 
   @media screen and (max-width: 768px) {
     min-height: 100vh;
-    padding-top: 7em;
   }
 
   .container {

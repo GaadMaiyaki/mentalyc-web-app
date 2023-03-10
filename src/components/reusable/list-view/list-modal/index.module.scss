@@ -2,14 +2,6 @@
 
 .wrapper {
   background-color: var(--mentalyc-white);
-  box-shadow: 4px 4px 8px var(--mentalyc-shadow-dark);
-  border-radius: $mentalyc-md;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:hover {
-    opacity: 0.9;
-  }
 
   button {
     background-color: transparent;

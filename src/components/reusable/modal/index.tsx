@@ -12,6 +12,7 @@ interface IModal {
   show: boolean;
   columnLayout?: string;
   setShow: (arg: boolean) => void;
+  padding?: boolean;
 }
 
 const Modal = ({
@@ -19,6 +20,7 @@ const Modal = ({
   columnLayout = "col-12",
   setShow,
   children,
+  padding = true,
 }: IModal) => {
   const modalRef = React.useRef<HTMLDivElement>(null);
 
@@ -34,8 +36,9 @@ const Modal = ({
     ? ReactDOM.createPortal(
         <section
           className={parseClassName([
-            "position-absolute w-100",
+            "position-absolute d-flex w-100",
             styles.wrapper,
+            padding ? styles.padding : "align-items-center",
           ])}
           onClick={closeModal}
           role="dialog"
@@ -45,7 +48,7 @@ const Modal = ({
           ref={modalRef}
         >
           <div className="container" tabIndex={-1}>
-            <div className="row justify-content-center px-2">
+            <div className="row justify-content-center px-2 align-items-center h-100">
               <aside
                 onClick={handleModalClick}
                 className={parseClassName([
