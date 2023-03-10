@@ -21,7 +21,9 @@ const ListContainer = ({
 }) => {
   const { client_name: clientName, note_type: noteType, progress, id } = note;
 
-  const handleDelete = () => {
+  const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+
     setNotes((notes) => {
       return notes.filter((note) => note.id !== id);
     });
@@ -30,6 +32,20 @@ const ListContainer = ({
 
   const [show, setShow] = React.useState(false);
   const [showListModal, setShowListModal] = React.useState(false);
+
+  const handleShowConfirmModal =
+    (value: boolean) => (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      setShow(value);
+    };
+
+  const handleShowListModal =
+    (value: boolean) => (e: React.MouseEvent<HTMLDivElement>) => {
+      e.stopPropagation();
+
+      setShowListModal(value);
+    };
 
   return (
     <>
@@ -75,7 +91,7 @@ const ListContainer = ({
       </Modal>
 
       <div
-        onClick={() => setShowListModal(true)}
+        onClick={handleShowListModal(true)}
         className={parseClassName([
           "d-flex align-items-center justify-content-between",
           "ps-2 ps-md-3 ps-lg-4 ps-xl-4 ps-xxl-4",
@@ -118,7 +134,7 @@ const ListContainer = ({
             <button
               title="delete"
               aria-label="delete note"
-              onClick={() => setShow(true)}
+              onClick={handleShowConfirmModal(true)}
             >
               <TrashSvg />
             </button>
