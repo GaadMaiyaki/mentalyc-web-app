@@ -25,7 +25,7 @@ describe("useProgress", () => {
     );
 
     act(() => {
-      jest.advanceTimersByTime(2000);
+      jest.advanceTimersByTime(1200);
     });
 
     expect(setNotes).toHaveBeenCalledTimes(1);
@@ -39,7 +39,7 @@ describe("useProgress", () => {
     );
 
     act(() => {
-      jest.advanceTimersByTime(2000);
+      jest.advanceTimersByTime(1200);
     });
 
     expect(setNotes).not.toHaveBeenCalled();
@@ -51,7 +51,7 @@ describe("useProgress", () => {
     renderHook(() => useProgress({ notes: [], setNotes, isSleeping: false }));
 
     act(() => {
-      jest.advanceTimersByTime(2000);
+      jest.advanceTimersByTime(1200);
     });
 
     expect(setNotes).not.toHaveBeenCalled();
@@ -74,7 +74,7 @@ describe("useProgress", () => {
     rerender({ notes: mockNotes, isSleeping: true });
 
     act(() => {
-      jest.advanceTimersByTime(2000);
+      jest.advanceTimersByTime(1200);
     });
 
     expect(setNotes).not.toHaveBeenCalled();
