@@ -52,12 +52,14 @@ const DashboardComponent = () => {
       </Modal>
 
       <section className="mt-4">
-        <aside className="d-flex justify-content-between">
+        <aside className="d-flex align-items-center justify-content-between">
           <Typography variant="h6" size="sm">
             Hi, Maria
           </Typography>
 
-          <HelpSvg />
+          <aside className="d-flex align-self-center">
+            <HelpSvg />
+          </aside>
         </aside>
 
         <Typography variant="body" size="md" bold classes="my-3">
