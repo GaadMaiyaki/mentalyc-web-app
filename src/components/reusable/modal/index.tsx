@@ -36,9 +36,9 @@ const Modal = ({
     ? ReactDOM.createPortal(
         <section
           className={parseClassName([
-            "position-absolute d-flex w-100",
+            "position-absolute w-100",
             styles.wrapper,
-            padding ? styles.padding : "align-items-center",
+            padding ? styles.padding : "d-flex align-items-center",
           ])}
           onClick={closeModal}
           role="dialog"
@@ -48,7 +48,7 @@ const Modal = ({
           ref={modalRef}
         >
           <div className="container" tabIndex={-1}>
-            <div className="row justify-content-center px-2 align-items-center h-100">
+            <div className="row justify-content-center px-2 align-items-center">
               <aside
                 onClick={handleModalClick}
                 className={parseClassName([

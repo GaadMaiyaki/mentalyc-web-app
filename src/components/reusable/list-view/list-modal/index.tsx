@@ -39,8 +39,8 @@ const ListModal = ({
         ])}
       >
         <Typography
-          variant="div"
-          size="lg"
+          variant="h6"
+          size="md"
           bold
           classes={parseClassName(["text-center mb-3 w-100"])}
         >
@@ -49,7 +49,7 @@ const ListModal = ({
         <aside className="mb-4">
           <Typography
             variant="div"
-            size="md"
+            size="sm"
             bold
             classes={parseClassName(["text-left w-100"])}
           >
@@ -57,7 +57,7 @@ const ListModal = ({
           </Typography>
           <Typography
             variant="div"
-            size="md"
+            size="xs"
             classes={parseClassName(["text-left w-100"])}
           >
             {clientName}
@@ -67,7 +67,7 @@ const ListModal = ({
         <aside>
           <Typography
             variant="div"
-            size="md"
+            size="sm"
             bold
             classes={parseClassName(["text-left w-100"])}
           >
@@ -76,7 +76,7 @@ const ListModal = ({
 
           <Typography
             variant="div"
-            size="md"
+            size="xs"
             classes={parseClassName(["text-left w-100"])}
           >
             {noteType}
@@ -86,14 +86,14 @@ const ListModal = ({
         <aside className="mt-4">
           <Typography
             variant="div"
-            size="md"
+            size="sm"
             bold
             classes={parseClassName(["text-left w-100"])}
           >
             ETA
           </Typography>
 
-          <div className="d-flex align-items-center justify-content-between w-100 pb-3">
+          <div className="d-flex align-items-center justify-content-between w-100 pb-4">
             <div className={parseClassName([styles.flexProgress, "pt-1"])}>
               <ProgressBar value={progress} />
             </div>
