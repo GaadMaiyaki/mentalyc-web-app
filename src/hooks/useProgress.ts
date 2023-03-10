@@ -27,7 +27,7 @@ const useProgress = ({ notes, setNotes, isSleeping }: IuseProgress) => {
       (isSleeping && timerId.current) ||
       (notes.length <= 0 && timerId.current)
     ) {
-      clearInterval(timerId.current!);
+      clearInterval(timerId.current);
       return;
     }
 
