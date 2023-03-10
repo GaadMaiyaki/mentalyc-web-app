@@ -8,7 +8,7 @@ interface IuseProgress {
   isSleeping: boolean;
 }
 
-const delay: number = 2000;
+const delay: number = 1200;
 
 const handleUpdate = (notes: INotes[]) => {
   return notes
