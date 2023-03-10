@@ -94,16 +94,11 @@ const ListModal = ({
           </Typography>
 
           <div className="d-flex align-items-center justify-content-between w-100 pb-3">
-            <div className={parseClassName([styles.flexProgress])}>
+            <div className={parseClassName([styles.flexProgress, "pt-1"])}>
               <ProgressBar value={progress} />
             </div>
 
-            <div
-              className={parseClassName([
-                styles.flexDelete,
-                "d-flex align-self-center justify-content-end",
-              ])}
-            >
+            <div className={parseClassName([styles.flexDelete, "text-end"])}>
               <button
                 title="delete"
                 aria-label="delete note"
