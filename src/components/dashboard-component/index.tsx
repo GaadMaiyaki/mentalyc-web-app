@@ -57,7 +57,7 @@ const DashboardComponent = () => {
             Hi, Maria
           </Typography>
 
-          <aside className="d-flex align-self-center">
+          <aside>
             <HelpSvg />
           </aside>
         </aside>
